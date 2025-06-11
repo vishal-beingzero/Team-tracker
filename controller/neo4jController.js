@@ -242,9 +242,11 @@ const addProblems = async (req, res) => {
     const problems = req.body; // Assuming req.body is an array of JSON objects [{ problemId, link }, { problemId, link }, ...]
     try {
         const addedLinks = [];
+        console.log(problems + " holaamigo ");
         
         for (const problem of problems) {
             const problemLink  = problem.problem;
+
 
             const link = normalizeLink(problemLink);
 
